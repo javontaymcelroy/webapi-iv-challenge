@@ -1,12 +1,12 @@
 const express = require('express');
 const server = express();
 
-const usersRouter = require('./routes/users.js');
+const moviesRouter = require('./routes/movies.js');
 
 server.get('/', (req, res) => {
-  res.send('<p>She is working!</p>');
+  res.send('<p>Server is up and running!</p>');
 });
 
-server.use('/users', usersRouter);
+server.use('/movies', moviesRouter);
 
 module.exports = server;
